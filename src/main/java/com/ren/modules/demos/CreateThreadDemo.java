@@ -17,10 +17,11 @@ public class CreateThreadDemo {
             }
         };
         Thread thread2 = new Thread(new Runnable() {
-                public void run() {
-                    System.out.println("Runnable创建线程");
-                }
+            public void run() {
+                System.out.println("Runnable创建线程");
+            }
         });
+
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Future<String> future = executorService.submit(new Callable<String>() {
             public String call() throws Exception {
