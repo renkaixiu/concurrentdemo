@@ -42,7 +42,7 @@ public class ThreadLocalDemo {
             } else {
                 try {
                     Date date = sdf.get().parse(this.date);
-                    System.out.println(date);
+                    System.out.println(Thread.currentThread().getName()+":"+date);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
